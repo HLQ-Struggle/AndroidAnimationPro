@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAnimationPro">
         <activity
+            android:name=".pro.AnimationListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_animation_list"
+            android:theme="@style/Theme.AndroidAnimationPro.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
