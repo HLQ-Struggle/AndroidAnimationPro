@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,15 +25,132 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:scaleType="fitXY"  />
+            android:scaleType="fitXY" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="小兔子乖乖"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTween"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="补间动画"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivTweenRotate_0"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTween" />
+
+            <ImageView
+                android:id="@+id/ivTweenRotate_1"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTweenRotate_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenRotate_0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRotateClick"
+                android:text="爱的魔力转圈圈"
+                app:layout_constraintEnd_toStartOf="@+id/ivTweenRotate_1"
+                app:layout_constraintStart_toEndOf="@+id/ivTweenRotate_0"
+                app:layout_constraintTop_toBottomOf="@+id/tvTween" />
+
+            <ImageView
+                android:id="@+id/ivTweenAlpha_0"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTweenRotate_0" />
+
+            <ImageView
+                android:id="@+id/ivTweenAlpha_1"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTweenAlpha_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenAlpha_0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onAlphaClick"
+                android:text="爱而不得 若隐若现"
+                app:layout_constraintEnd_toStartOf="@+id/ivTweenAlpha_1"
+                app:layout_constraintStart_toEndOf="@+id/ivTweenAlpha_0"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenAlpha_0" />
+
+            <ImageView
+                android:id="@+id/ivTweenScale_0"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTweenAlpha_0" />
+
+            <ImageView
+                android:id="@+id/ivTweenScale_1"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTweenScale_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenScale_0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onScaleClick"
+                android:text="爱你的心 永恒不变"
+                app:layout_constraintEnd_toStartOf="@+id/ivTweenScale_1"
+                app:layout_constraintStart_toEndOf="@+id/ivTweenScale_0"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenScale_0" />
+
+            <ImageView
+                android:id="@+id/ivTweenTranslate_0"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivTweenScale_0" />
+
+            <ImageView
+                android:id="@+id/ivTweenTranslate_1"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:src="@drawable/img_change"
+                app:layout_constraintBottom_toBottomOf="@+id/ivTweenTranslate_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenTranslate_0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onTranslateClick"
+                android:text="能否平移到你心房"
+                app:layout_constraintEnd_toStartOf="@+id/ivTweenTranslate_1"
+                app:layout_constraintStart_toEndOf="@+id/ivTweenTranslate_0"
+                app:layout_constraintTop_toTopOf="@+id/ivTweenTranslate_0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
